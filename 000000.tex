@@ -7,11 +7,13 @@
 \problem{CEF}  % 请在此处填写题号
  \usepackage{mathptmx}  % 这是 Times 字体，中规中矩 
 %\usepackage{mathpazo}  % 这是 COMAP 官方杂志采用的更好看的 Palatino 字体，可替代以上的 mathptmx 宏包
-\title{{\sc Here Are Our Title}}  % 标题
+\title{{\sc Our Title}}  % 标题
 \usepackage{enumerate}
 \usepackage{lettrine}
-
-
+\usepackage[ruled,linesnumbered]{algorithm2e}
+\usepackage{lipsum}
+\usepackage{hyperref}
+\usepackage{adjustbox}
 % 如需要修改题头（默认为 MCM/ICM），请使用以下命令（此处修改为 MCM）
 %\renewcommand{\contest}{MCM}
 \usepackage{bm}
@@ -300,7 +302,20 @@ Our research is basically based on the predecessors, and there are some improvem
     \item[$\bullet$] Keep a firm grip on the local media to prevent public opinion from getting out of control. There is no substitute for the role of the media in regime change, and its entry into and occupation of a country's position of public opinion can help to bring down that country's regime. For the ruling party, therefore, to give ground. That means the beginning of the loss of power, public opinion out of control, not much time.
 \end{enumerate}}
 \end{letter}
-
+\begin{algorithm}
+\caption{Simulation-optimization heuristic}\label{algorithm}
+\KwData{current period $t$, initial inventory $I_{t-1}$, initial capital $B_{t-1}$, demand samples}
+\KwResult{Optimal order quantity $Q^{\ast}_{t}$}
+$r\leftarrow t$\;
+$\Delta B^{\ast}\leftarrow -\infty$\;
+\While{$\Delta B\leq \Delta B^{\ast}$ and $r\leq T$}{$Q\leftarrow\arg\max_{Q\geq 0}\Delta B^{Q}_{t,r}(I_{t-1},B_{t-1})$\;
+$\Delta B\leftarrow \Delta B^{Q}_{t,r}(I_{t-1},B_{t-1})/(r-t+1)$\;
+\If{$\Delta B\geq \Delta B^{\ast}$}{$Q^{\ast}\leftarrow Q$\;
+$\Delta B^{\ast}\leftarrow \Delta B$\;}
+$r\leftarrow r+1$\;}
+\end{algorithm}
+%伪代码
+\end{document}
 
 
 
