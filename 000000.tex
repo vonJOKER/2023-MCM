@@ -7,7 +7,7 @@
 \problem{CEF}  % 请在此处填写题号
  \usepackage{mathptmx}  % 这是 Times 字体，中规中矩 
 %\usepackage{mathpazo}  % 这是 COMAP 官方杂志采用的更好看的 Palatino 字体，可替代以上的 mathptmx 宏包
-\title{{\sc Our Title}}  % 标题
+\title{{\sc Our Title}\\ Our Title}  % 标题
 \usepackage{enumerate}
 \usepackage{lettrine}
 \usepackage[ruled,linesnumbered]{algorithm2e}
@@ -74,27 +74,17 @@ Notations that we use in the model are shown in the Table \ref{tb:notation}:
 \begin{center}
 \caption{Notations}
 \begin{tabular}{clc}
-	\toprule
-	\multicolumn{1}{m{3cm}}{\centering Symbol}
-	&\multicolumn{1}{m{8cm}}{Description}& Unit\\
+	\toprule[1.5pt]
+	% \multicolumn{1}{m{3cm}}
+	{\centering {\itshape\textbf{Symbol}}}
+	&
+	% \multicolumn{1}{m{8cm}}
+	{\itshape\textbf{Description}}&{\centering {\itshape\textbf{Unit}}} \\
 	\midrule
 	$A_i$&Level 1 indicators&- \\
-	\bottomrule
+	\bottomrule[1.5pt]
 \end{tabular}\label{tb:notation}
 \end{center}
-\end{table}
-\begin{table}[htbp]
-	\centering
-	\caption{Notations}
-	\begin{tabular}[cp{0.9\textwidth}]{clc}
-		\toprule[2pt]
-		\setlength{\leftskip}{0pt plus 1fil minus \marginparwidth}
-		\setlength{\rightskip}{\leftskip}
-		Symbol & Description&Unit\\
-		\midrule
-		$r$ & index of unfairness&- \\
-		\bottomrule[2pt]
-	\end{tabular}\label{tb:notation}
 \end{table}
 
 
@@ -116,6 +106,41 @@ Notations that we use in the model are shown in the Table \ref{tb:notation}:
     \item 
 
 \end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -315,7 +340,7 @@ $\Delta B^{\ast}\leftarrow \Delta B$\;}
 $r\leftarrow r+1$\;}
 \end{algorithm}
 %伪代码
-\end{document}
+
 
 
 
